@@ -1,21 +1,24 @@
 import './App.css';
 import elephant from "./images/elephant.jpeg";
+import Images from './components/images';
 
-function App() {
+function App(props) {
   // code here
-  let Data = imageData()
+
   return (
     <div>
-      <div>
-        <h1 className='heading' >Kalvium Gallery-1</h1>
-      </div>
-      <div className='img-container'>
-        {Data.map((element) => {
-          return <img src={element.img} />
-        })
 
-        }
+      <div>
+
+        <h1 className='heading' >Kalvium Gallery-1</h1>
+
       </div>
+
+
+
+      <Images data={props.data} />
+
+
     </div>
   )
 }
